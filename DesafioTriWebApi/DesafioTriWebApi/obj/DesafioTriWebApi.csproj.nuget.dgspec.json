@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jamile\\Documents\\github\\git\\Desafio2TRI\\projetoDotNet\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {}
+    "C:\\Users\\jamile\\Documents\\github\\git\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jamile\\Documents\\github\\git\\Desafio2TRI\\projetoDotNet\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {
+    "C:\\Users\\jamile\\Documents\\github\\git\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jamile\\Documents\\github\\git\\Desafio2TRI\\projetoDotNet\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\jamile\\Documents\\github\\git\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
         "projectName": "DesafioTriWebApi",
-        "projectPath": "C:\\Users\\jamile\\Documents\\github\\git\\Desafio2TRI\\projetoDotNet\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
+        "projectPath": "C:\\Users\\jamile\\Documents\\github\\git\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
         "packagesPath": "C:\\Users\\jamile\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jamile\\Documents\\github\\git\\Desafio2TRI\\projetoDotNet\\DesafioTriWebApi\\DesafioTriWebApi\\obj\\",
+        "outputPath": "C:\\Users\\jamile\\Documents\\github\\git\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jamile\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.29, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

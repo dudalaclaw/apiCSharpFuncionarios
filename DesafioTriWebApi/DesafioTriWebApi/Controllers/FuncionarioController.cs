@@ -3,18 +3,18 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DesafioTriWebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
-    public class FuncionarioController
+    public class FuncionarioController : ControllerBase
     {
-        FuncionarioRepository _funcionario;
+        IFuncionarioRepository _funcionario;
 
-        public FuncionarioController(FuncionarioRepository funcionario)
+        public FuncionarioController(IFuncionarioRepository funcionario)
         {
             _funcionario = funcionario;
         }
 
-        [HttpGet]
+        [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
             var result = _funcionario.GetAll();

@@ -10,6 +10,10 @@ namespace DesafioTriWebApi.Repository
             throw new System.NotImplementedException();
         }
 
+        public virtual TEntity Get(int id)
+        {
+            throw new NotImplementedException();
+        }
         public void Dispose()
         {
             GC.SuppressFinalize(this);

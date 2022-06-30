@@ -14,10 +14,11 @@ namespace DesafioTriWebApi.Controllers
             _funcionario = funcionario;
         }
 
-        [HttpGet("GetAll")]
-        public IActionResult GetAll()
+        
+        [HttpGet("Get")]
+        public IActionResult Get(int id)
         {
-            var result = _funcionario.GetAll();
+            var result = _funcionario.Get(id);
             return new JsonResult(result);
         }
     }

@@ -2,6 +2,7 @@
 using DesafioTriWebApi.Dapper.Interfaces;
 using DesafioTriWebApi.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DesafioTriWebApi.Repository
 {
@@ -18,21 +19,38 @@ namespace DesafioTriWebApi.Repository
         {
             var connection = _connection.Connection();
             var scriptSql = @"SELECT id,
+                                first_name Nome, 
+                                last_name Sobrenome,
+                                job_title Cargo,
+                              FROM northwind.employees
+                              WHERE city = 'Seattle';";
+
+            var funcionarios = connection.Query<Funcionario>(scriptSql);
+            return funcionarios;
+        }
+
+        public override Funcionario Get(int id)
+        {
+            var connection = _connection.Connection();
+            var scriptSql = @$"SELECT id,
+                                first_name Nome, 
+                                last_name Sobrenome,
+                                job_title Cargo,
                                 business_phone TelefoneComercial,
                                 home_phone TelefoneResidencial,
-                                mobile_phone TelefoneCelular, 
+                                mobile_phone TelefoneCelular,
                                 address Endereco,
                                 city Cidade,
                                 state_province Estado,
                                 zip_postal_code CodigoPostal,
                                 country_region Pais,
                                 web_page Website,
-                                notes Observacao 
+                                notes Observacao
                               FROM northwind.employees
-                              WHERE city = 'Seattle';";
+                              WHERE id = {id};";
 
-            var funcionarios = connection.Query<Funcionario>(scriptSql);
-            return funcionarios;
+            var funcionario = connection.Query<Funcionario>(scriptSql).FirstOrDefault();
+            return funcionario;
         }
     }
 }

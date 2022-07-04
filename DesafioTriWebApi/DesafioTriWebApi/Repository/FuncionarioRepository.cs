@@ -52,5 +52,19 @@ namespace DesafioTriWebApi.Repository
             var funcionario = connection.Query<Funcionario>(scriptSql).FirstOrDefault();
             return funcionario;
         }
+
+        public IEnumerable<Venda> GetUltimasVendasFuncionario(int idFuncionario)
+        {
+            var connection = _connection.Connection();
+            var scriptSql = $@"SELECT o.id 
+                                FROM northwind.employees a
+                                inner join northwind.orders o on a.id = o.employee_id
+                                where a.id = {idFuncionario}
+                                ORDER BY o.id desc
+                                LIMIT 10;";
+
+            var vendas = connection.Query<Venda>(scriptSql);
+            return vendas;
+        }
     }
 }

@@ -27,5 +27,12 @@ namespace DesafioTriWebApi.Controllers
             var result = _funcionario.Get(id);
             return new JsonResult(result);
         }
+
+        [HttpGet("GetUltimasVendasFuncionario/{id:int}")]
+        public IActionResult GetUltimasVendasFuncionario(int id)
+        { 
+            var result = _funcionario.GetUltimasVendasFuncionario(id);
+            return new JsonResult(result);
+        }
     }
 }

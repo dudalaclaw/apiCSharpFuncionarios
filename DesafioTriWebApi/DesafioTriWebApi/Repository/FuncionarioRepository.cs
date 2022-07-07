@@ -2,6 +2,8 @@
 using DesafioTriWebApi.Dapper.Interfaces;
 using DesafioTriWebApi.Models;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 
 namespace DesafioTriWebApi.Repository
@@ -32,6 +34,7 @@ namespace DesafioTriWebApi.Repository
         public override Funcionario Get(int id)
         {
             var connection = _connection.Connection();
+            
             var scriptSql = @$"SELECT id,
                                 first_name Nome, 
                                 last_name Sobrenome,
@@ -50,6 +53,15 @@ namespace DesafioTriWebApi.Repository
                               WHERE id = {id};";
 
             var funcionario = connection.Query<Funcionario>(scriptSql).FirstOrDefault();
+
+            var scriptFoto = $"SELECT attachments FROM northwind.employees WHERE id = {id};";
+            byte[] blobFoto = connection.Query<byte[]>(scriptFoto).FirstOrDefault();
+
+            using (MemoryStream ms = new(blobFoto))
+            {
+                funcionario.Foto = Image.FromStream(ms);
+            }
+
             return funcionario;
         }
 

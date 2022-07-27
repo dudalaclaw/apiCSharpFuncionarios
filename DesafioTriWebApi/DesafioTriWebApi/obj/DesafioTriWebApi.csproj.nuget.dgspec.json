@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\laclaw\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {}
+    "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {}
   },
   "projects": {
-    "C:\\laclaw\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {
+    "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\laclaw\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
         "projectName": "DesafioTriWebApi",
-        "projectPath": "C:\\laclaw\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
-        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\laclaw\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\obj\\",
+        "projectPath": "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
+        "packagesPath": "C:\\Users\\felipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

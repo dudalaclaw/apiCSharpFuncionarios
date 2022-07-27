@@ -32,6 +32,14 @@ namespace DesafioTriWebApi
             services.AddControllers();
             services.AddScoped<IConnectionFactory, DefaultSqlConnectionFactory>();
             services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder => builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                );
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +49,7 @@ namespace DesafioTriWebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
 
             app.UseRouting();

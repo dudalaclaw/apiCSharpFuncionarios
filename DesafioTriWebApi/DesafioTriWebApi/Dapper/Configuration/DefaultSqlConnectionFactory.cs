@@ -8,7 +8,7 @@ namespace DesafioTriWebApi.Dapper.Configuration
     {
         public IDbConnection Connection()
         {
-            return new MySqlConnection("Server=127.0.0.1;Database=northwind;Uid=root;Pwd=123456;");
+            return new MySqlConnection("Server=127.0.0.1;Database=northwind;Uid=root;Pwd=leonardo10;");
         }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {}
+    "C:\\Users\\Leonardo da Silva\\Documents\\GitHub\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {
+    "C:\\Users\\Leonardo da Silva\\Documents\\GitHub\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Leonardo da Silva\\Documents\\GitHub\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
         "projectName": "DesafioTriWebApi",
-        "projectPath": "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
-        "packagesPath": "C:\\Users\\felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\obj\\",
+        "projectPath": "C:\\Users\\Leonardo da Silva\\Documents\\GitHub\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
+        "packagesPath": "C:\\Users\\Leonardo da Silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Leonardo da Silva\\Documents\\GitHub\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Leonardo da Silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

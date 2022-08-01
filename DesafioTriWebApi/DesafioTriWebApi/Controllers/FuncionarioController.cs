@@ -28,10 +28,10 @@ namespace DesafioTriWebApi.Controllers
             return new JsonResult(result);
         }
 
-        [HttpGet("GetUltimasVendasFuncionario/{id:int}")]
-        public IActionResult GetUltimasVendasFuncionario(int id)
+        [HttpGet("GetUltimasVendasFuncionario")]
+        public IActionResult GetUltimasVendasFuncionario()
         { 
-            var result = _funcionario.GetUltimasVendasFuncionario(id);
+            var result = _funcionario.GetUltimasVendasFuncionario();
             return new JsonResult(result);
         }
     }

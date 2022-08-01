@@ -6,6 +6,6 @@ namespace DesafioTriWebApi.Repository
 {
     public interface IFuncionarioRepository : IRepository<Funcionario>
     {
-        IEnumerable<Venda> GetUltimasVendasFuncionario(int idFuncionario);
+        IEnumerable<Venda> GetUltimasVendasFuncionario();
     }
 }

@@ -20,10 +20,20 @@ namespace DesafioTriWebApi.Repository
         public override IEnumerable<Funcionario> GetAll()
         {
             var connection = _connection.Connection();
-            var scriptSql = @"SELECT id,
+            var scriptSql = @$"SELECT id,
                                 first_name Nome, 
                                 last_name Sobrenome,
                                 job_title Cargo,
+                                business_phone TelefoneComercial,
+                                home_phone TelefoneResidencial,
+                                mobile_phone TelefoneCelular,
+                                address Endereco,
+                                city Cidade,
+                                state_province Estado,
+                                zip_postal_code CodigoPostal,
+                                country_region Pais,
+                                web_page Website,
+                                notes Observacao 
                               FROM northwind.employees
                               WHERE city = 'Seattle';";
 
@@ -65,15 +75,25 @@ namespace DesafioTriWebApi.Repository
             return funcionario;
         }
 
-        public IEnumerable<Venda> GetUltimasVendasFuncionario(int idFuncionario)
+        public IEnumerable<Venda> GetUltimasVendasFuncionario()
         {
+            //Abaixo fica a query das ultimas vendas realizadas
             var connection = _connection.Connection();
-            var scriptSql = $@"SELECT o.id 
-                                FROM northwind.employees a
-                                inner join northwind.orders o on a.id = o.employee_id
-                                where a.id = {idFuncionario}
-                                ORDER BY o.id desc
-                                LIMIT 10;";
+            var scriptSql = $@"select concat(a.first_name, ' ' , a.last_name) NomeEmpregado, 
+                                d.product_name NomeProduto,
+                                d.id IdProduto,
+                                b.order_date as data_venda
+                                from northwind.employees a
+                                inner join northwind.orders b
+                                on a.id = b.employee_id
+                                and a.city in('Seattle')
+                                inner join northwind.order_details c
+                                on b.id = c.order_id
+                                inner join northwind.products d
+                                on c.product_id = d.id 
+                                order by b.order_date desc
+                                limit 10;";
+
 
             var vendas = connection.Query<Venda>(scriptSql);
             return vendas;

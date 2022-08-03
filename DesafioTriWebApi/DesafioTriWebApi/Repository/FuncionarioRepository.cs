@@ -33,13 +33,17 @@ namespace DesafioTriWebApi.Repository
                                 zip_postal_code CodigoPostal,
                                 country_region Pais,
                                 web_page Website,
-                                notes Observacao 
+                                notes Observacao,
+                                to_base64(attachments) as Foto
                               FROM northwind.employees
                               WHERE city = 'Seattle';";
 
             var funcionarios = connection.Query<Funcionario>(scriptSql);
+
+
             return funcionarios;
         }
+        
 
         public override Funcionario Get(int id)
         {
@@ -63,15 +67,6 @@ namespace DesafioTriWebApi.Repository
                               WHERE id = {id};";
 
             var funcionario = connection.Query<Funcionario>(scriptSql).FirstOrDefault();
-
-            var scriptFoto = $"SELECT attachments FROM northwind.employees WHERE id = {id};";
-            byte[] blobFoto = connection.Query<byte[]>(scriptFoto).FirstOrDefault();
-
-            using (MemoryStream ms = new(blobFoto))
-            {
-                funcionario.Foto = Image.FromStream(ms);
-            }
-
             return funcionario;
         }
 

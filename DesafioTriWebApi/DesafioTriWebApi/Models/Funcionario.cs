@@ -18,7 +18,6 @@ namespace DesafioTriWebApi.Models
         public string Pais { get; set; }
         public string Website { get; set; }
         public string Observacao { get; set; }
-        public decimal Salario { get; set; }
-        public Image Foto { get; set; }
+        public string Foto { get; set; }
     }
 }

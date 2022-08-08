@@ -93,5 +93,31 @@ namespace DesafioTriWebApi.Repository
             var vendas = connection.Query<Venda>(scriptSql);
             return vendas;
         }
+
+        public IEnumerable<Produtos> GetProdutos()
+        {
+            //Abaixo fica a query das ultimas vendas realizadas
+            var connection = _connection.Connection();
+            var scriptSql = $@"SELECT concat(b.first_name, ' ', b.last_name) NomeFornecedor,
+                                b.business_phone ContatoFornecedor,
+                                b.email_address EmailFornecedor,
+                                a.id IdProduto,
+                                a.product_code CodigoProduto,
+                                a.product_name NomeProduto,
+                                a.description DescricaoProduto,
+                                a.standard_cost Custo,
+                                a.list_price PrecoVenda,
+                                a.quantity_per_unit UnidadeVenda,
+                                a.category Categoria,
+                                to_base64(a.attachments) FotoProduto
+                                from northwind.products a
+                                inner
+                                join northwind.suppliers b
+                                on a.supplier_ids = b.id; ";
+
+
+            var produtos = connection.Query<Produtos>(scriptSql);
+            return produtos;
+        }
     }
 }

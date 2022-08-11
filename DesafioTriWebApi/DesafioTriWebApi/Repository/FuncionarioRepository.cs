@@ -75,7 +75,7 @@ namespace DesafioTriWebApi.Repository
             //Abaixo fica a query das ultimas vendas realizadas
             var connection = _connection.Connection();
             var scriptSql = $@"select concat(a.first_name, ' ' , a.last_name) NomeEmpregado, 
-                                d.product_name NomeProduto,
+                                replace(d.product_name, 'Northwind Traders', '') NomeProduto,
                                 d.id IdProduto,
                                 b.order_date as data_venda
                                 from northwind.employees a
@@ -96,14 +96,14 @@ namespace DesafioTriWebApi.Repository
 
         public IEnumerable<Produtos> GetProdutos()
         {
-            //Abaixo fica a query das ultimas vendas realizadas
+            //Abaixo fica a query dos produtos
             var connection = _connection.Connection();
             var scriptSql = $@"SELECT concat(b.first_name, ' ', b.last_name) NomeFornecedor,
                                 b.business_phone ContatoFornecedor,
                                 b.email_address EmailFornecedor,
                                 a.id IdProduto,
                                 a.product_code CodigoProduto,
-                                a.product_name NomeProduto,
+                                replace(a.product_name, 'Northwind Traders', '') NomeProduto,
                                 a.description DescricaoProduto,
                                 a.standard_cost Custo,
                                 a.list_price PrecoVenda,

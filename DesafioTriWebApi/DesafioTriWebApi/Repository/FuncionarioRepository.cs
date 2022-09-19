@@ -35,7 +35,7 @@ namespace DesafioTriWebApi.Repository
                                 web_page Website,
                                 notes Observacao,
                                 to_base64(attachments) as Foto
-                              FROM northwind.employees
+                              FROM db_desafio_tri.employees
                               WHERE city = 'Seattle';";
 
             var funcionarios = connection.Query<Funcionario>(scriptSql);
@@ -63,7 +63,7 @@ namespace DesafioTriWebApi.Repository
                                 country_region Pais,
                                 web_page Website,
                                 notes Observacao
-                              FROM northwind.employees
+                              FROM db_desafio_tri.employees
                               WHERE id = {id};";
 
             var funcionario = connection.Query<Funcionario>(scriptSql).FirstOrDefault();
@@ -78,13 +78,13 @@ namespace DesafioTriWebApi.Repository
                                 replace(d.product_name, 'Northwind Traders', '') NomeProduto,
                                 d.id IdProduto,
                                 b.order_date as data_venda
-                                from northwind.employees a
-                                inner join northwind.orders b
+                                from db_desafio_tri.employees a
+                                inner join db_desafio_tri.orders b
                                 on a.id = b.employee_id
                                 and a.city in('Seattle')
-                                inner join northwind.order_details c
+                                inner join db_desafio_tri.order_details c
                                 on b.id = c.order_id
-                                inner join northwind.products d
+                                inner join db_desafio_tri.products d
                                 on c.product_id = d.id 
                                 order by b.order_date desc
                                 limit 10;";
@@ -110,9 +110,9 @@ namespace DesafioTriWebApi.Repository
                                 a.quantity_per_unit UnidadeVenda,
                                 a.category Categoria,
                                 to_base64(a.attachments) FotoProduto
-                                from northwind.products a
+                                from db_desafio_tri.products a
                                 inner
-                                join northwind.suppliers b
+                                join db_desafio_tri.suppliers b
                                 on a.supplier_ids = b.id; ";
 
 

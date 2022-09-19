@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {}
+    "C:\\Users\\Duda Laclaw\\Documents\\GitHub\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {
+    "C:\\Users\\Duda Laclaw\\Documents\\GitHub\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Duda Laclaw\\Documents\\GitHub\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
         "projectName": "DesafioTriWebApi",
-        "projectPath": "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
-        "packagesPath": "C:\\Users\\felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felipe\\OneDrive\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\obj\\",
+        "projectPath": "C:\\Users\\Duda Laclaw\\Documents\\GitHub\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\DesafioTriWebApi.csproj",
+        "packagesPath": "C:\\Users\\Duda Laclaw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Duda Laclaw\\Documents\\GitHub\\Desafio2TRI\\DesafioTriWebApi\\DesafioTriWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Duda Laclaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",

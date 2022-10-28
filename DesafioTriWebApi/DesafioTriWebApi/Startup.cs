@@ -32,6 +32,7 @@ namespace DesafioTriWebApi
             services.AddControllers();
             services.AddScoped<IConnectionFactory, DefaultSqlConnectionFactory>();
             services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
+            services.AddScoped<ISalarioRepository, SalarioRepository>();
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy", builder => builder
